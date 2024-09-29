@@ -36,7 +36,7 @@ const StudentCard = ({
                 marginRight: 10,
               },
             }}
-            name={<span className="text-trunc">{name}</span>}
+            name={<span className="text-trunc text-[16px]">{name}</span>}
             description={section}
           />
         </div>

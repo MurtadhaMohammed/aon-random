@@ -4,7 +4,7 @@ import { Card, User } from "@nextui-org/react";
 import { PiCrownBold } from "react-icons/pi";
 
 const StudentCard = ({ data, scale }) => {
-  let { name, email, img } = data;
+  let { name, phone, img } = data;
 
   return (
     <Card
@@ -25,7 +25,7 @@ const StudentCard = ({ data, scale }) => {
             color: "warning",
           }}
           name={name || ". . ."}
-          description={email || "has no email !"}
+          description={phone}
         />
       </div>
     </Card>

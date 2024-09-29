@@ -3,13 +3,11 @@
 import { useEffect, useState } from "react";
 import StudentCard from "./studentCard";
 import { PiStudent } from "react-icons/pi";
-import { SkeletonLinks } from "../skeleton";
 import { Button, Spacer } from "@nextui-org/react";
 
 export const StudentsList = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
-  const [active, setActive] = useState(null);
   const [selectedIndices, setSelectedIndices] = useState([]);
   const [current, setCurrent] = useState({});
 

@@ -7,63 +7,32 @@ import { axios } from "@/lib";
 
 // let  = data;
 export const RandomStudent = () => {
-    const students = [
-      { id: 1, name: "Ali S. Salim", email: "ali@gmail.com", img: "" },
-      { id: 2, name: "Noor S. Salim", email: "ali@gmail.com", img: "" },
-      { id: 3, name: "Soso S. Salim", email: "ali@gmail.com", img: "" },
-      { id: 4, name: "Foo S. Salim", email: "ali@gmail.com", img: "" },
-      { id: 5, name: "Bar S. Salim", email: "ali@gmail.com", img: "" },
-      { id: 6, name: "Z S. Salim", email: "ali@gmail.com", img: "" },
-      { id: 7, name: "K S. Salim", email: "ali@gmail.com", img: "" },
-      { id: 8, name: "G S. Salim", email: "ali@gmail.com", img: "" },
-    ];
-  // const [students, setStudents] = useState([]);
+  // const students = [
+  //   { id: 1, name: "Ali S. Salim", email: "ali@gmail.com", img: "" },
+  //   { id: 2, name: "Noor S. Salim", email: "ali@gmail.com", img: "" },
+  //   { id: 3, name: "Soso S. Salim", email: "ali@gmail.com", img: "" },
+  //   { id: 4, name: "Foo S. Salim", email: "ali@gmail.com", img: "" },
+  //   { id: 5, name: "Bar S. Salim", email: "ali@gmail.com", img: "" },
+  //   { id: 6, name: "Z S. Salim", email: "ali@gmail.com", img: "" },
+  //   { id: 7, name: "K S. Salim", email: "ali@gmail.com", img: "" },
+  //   { id: 8, name: "G S. Salim", email: "ali@gmail.com", img: "" },
+  // ];
+  const [students, setStudents] = useState([]);
   const [loading, setLoading] = useState(false);
   const [current, setCurrent] = useState({});
   const [used, setUsed] = useState([]);
   const [scale, setScale] = useState(1.5);
 
-  // useEffect(() => {
-  //   if (students?.length !== 0) return;
-  //   const getData = async () => {
-  //     setLoading(true);
-  //     const res = await axios.get(
-  //       `/student?courseId=35924682-1d55-4e1f-b795-ad14d75cb6b5`
-  //     );
-  //     setStudents(res.data.data);
-  //     setLoading(false);
-  //   };
+  useEffect(() => {
+    loadData();
+  }, []);
 
-  //   getData().then();
-  // }, []);
-
-  //   useEffect(() => {
-  //     if (students?.length > 0) changeIndex();
-  //   }, [students]);
-
-  //   const changeIndex = () => {
-  //     students.map((_, index) => {
-  //       setTimeout(() => {
-  //         const randomSelect = getRandomNumber(
-  //           0,
-  //           students.length - used.length - 1
-  //         );
-  //         const student =
-  //           students.filter((std) => {
-  //             return !used.find((use) => use?.id === std?.id);
-  //           })[randomSelect] || {};
-
-  //         if (used.length === students.length) {
-  //           setUsed([]);
-  //           setCurrent({});
-  //           return;
-  //         }
-
-  //         setCurrent(() => student);
-  //         setUsed([...used, student]);
-  //       }, 200 * index);
-  //     });
-  //   };
+  const loadData = async () => {
+    const resp = await fetch("https://sheetdb.io/api/v1/fs8zkijl5cdsv");
+    const jsonResp = await resp.json();
+    setStudents(jsonResp);
+    setLoading(false);
+  };
 
   function getRandomNumber(min, max) {
     // Generate a random floating-point number between 0 and 1

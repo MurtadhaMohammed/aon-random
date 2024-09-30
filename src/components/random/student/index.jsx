@@ -3,10 +3,9 @@
 import { Button, Divider, Spinner } from "@nextui-org/react";
 import StudentCard from "../studentCard";
 import { useEffect, useState } from "react";
-import { axios } from "@/lib";
 
 // let  = data;
-export const RandomStudent = () => {
+export const RandomStudent = ({ course }) => {
   // const students = [
   //   { id: 1, name: "Ali S. Salim", email: "ali@gmail.com", img: "" },
   //   { id: 2, name: "Noor S. Salim", email: "ali@gmail.com", img: "" },
@@ -30,7 +29,7 @@ export const RandomStudent = () => {
   const loadData = async () => {
     const resp = await fetch("https://sheetdb.io/api/v1/fs8zkijl5cdsv");
     const jsonResp = await resp.json();
-    setStudents(jsonResp);
+    setStudents(jsonResp?.filter((el) => el?.section === course));
     setLoading(false);
   };
 

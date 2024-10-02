@@ -33,7 +33,7 @@ const StudentCard = ({
               isBordered: isCrown,
               color: isCrown && "warning",
               style: {
-                marginRight: 10,
+                marginRight: 2,
               },
             }}
             name={<span className="text-trunc text-[16px]">{name}</span>}

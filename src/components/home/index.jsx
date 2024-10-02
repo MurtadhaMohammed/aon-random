@@ -74,6 +74,10 @@ export const StudentsList = () => {
     };
   }, []);
 
+  const handleOpenAll = () =>{
+    setSelectedIndices(data)
+  }
+
   // if (loading) return <SkeletonLinks total={8} />;
 
   return (
@@ -93,6 +97,10 @@ export const StudentsList = () => {
             <b>{data?.length}</b> of Students
           </p>
           <Spacer />
+          <Button onClick={handleOpenAll} size="sm" disabled={loading}>
+            View
+          </Button>
+  
           <Button onClick={handleRandomActive} size="sm" isLoading={loading}>
             Go
           </Button>

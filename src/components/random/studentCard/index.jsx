@@ -4,7 +4,7 @@ import { Card, User } from "@nextui-org/react";
 import { PiCrownBold } from "react-icons/pi";
 
 const StudentCard = ({ data, scale }) => {
-  let { name, phone, img } = data;
+  let { name, phone, image } = data;
 
   return (
     <Card
@@ -19,7 +19,7 @@ const StudentCard = ({ data, scale }) => {
       <div className="flex justify-between items-center">
         <User
           avatarProps={{
-            src: img,
+            src: image,
             isBordered: true,
             //size: 'lg',
             color: "warning",

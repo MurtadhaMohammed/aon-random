@@ -77,10 +77,10 @@ export const RandomStudent = ({ course }) => {
 
       {current?.id && <Divider className="mt-12 mb-6" />}
       <ul className=" text-lg">
-        <li className="mt-4">Q1 : What is your Nickname ? 😉</li>
-        <li className="mt-4">Q2 : Your current work or studying ? 🧑‍💻</li>
-        <li className="mt-4">Q3 : What is your goal in the live ? 👻 💀</li>
-        <li className="mt-4">Q4 : Fun fact about you ? 🫣</li>
+        <li className="mt-4">Q1: What's your nickname? 😉</li>
+        <li className="mt-4">Q2: Are you currently working or studying? 🧑‍💻</li>
+        <li className="mt-4">Q3: What's your life goal? 👻 💀</li>
+        <li className="mt-4">Q4: Tell us a fun fact about yourself! 🫣</li>
       </ul>
       <Divider className="mt-6 mb-6" />
 

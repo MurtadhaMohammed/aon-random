@@ -21,7 +21,7 @@ export const SkeletonLinks = ({ total }) => {
         <div className="flex gap-2 items-center mr-2 md:ml-4">
           <PiStudent className="text-gray-500 -mt-1" size={18} />
           <p className="text-gray-500">
-            <b>{list?.length}</b> of Students
+            <b>{list?.length}</b> Students
           </p>
         </div>
       </div>

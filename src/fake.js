@@ -36,7 +36,7 @@ export const students = [
 export const activitiesList = [
   {
     id: 1,
-    title: "Session Three (JsavScript Quize)",
+    title: "Session Three (JavaScript Quize)",
     info: `This quize is on google sheet in this lik 
         <a  href="/#">https://quiz.com</a>`,
     date: "2023/05/20",

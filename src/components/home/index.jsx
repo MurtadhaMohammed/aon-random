@@ -90,7 +90,7 @@ export const StudentsList = () => {
         <div className="flex gap-2 items-center mr-2 md:ml-4">
           <PiStudent className="text-gray-500 -mt-1" size={18} />
           <p className="text-gray-500">
-            <b>{data?.length}</b> of Students
+            <b>{data?.length}</b> Students
           </p>
           <Spacer />
           <Button onClick={handleRandomActive} size="sm" isLoading={loading}>

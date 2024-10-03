@@ -15,14 +15,14 @@ const StudentCard = ({
   return (
     <div onClick={onPress}>
       <Card
-        className="p-5 w-full border-4 border-[#fff]"
+        className="p-4 w-full border-4 border-[#fff]"
         shadow="sm"
         style={{
           borderColor: active ? "#f5a523" : "#fff",
           transition: "0.4s",
         }}
       >
-        <div className="absolute top-2 left-4  -rotate-30">
+        <div className="absolute top-1 left-3  -rotate-30">
           <PiCrownBold size={18} className="text-yellow-500" />
         </div>
 

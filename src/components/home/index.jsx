@@ -107,7 +107,7 @@ export const StudentsList = () => {
         </div>
       </div>
 
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 mt-2 pb-8">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3 mt-2 pb-8">
         {data?.map((el, i) => (
           <StudentCard
             active={current?.id == el?.id}

@@ -27,9 +27,10 @@ export const RandomStudent = ({ course }) => {
   }, []);
 
   const loadData = async () => {
+    setLoading(true);
     const resp = await fetch("https://sheetdb.io/api/v1/fs8zkijl5cdsv");
     const jsonResp = await resp.json();
-    setStudents(jsonResp?.filter((el) => el?.section === course));
+    setStudents(jsonResp?.filter((el) => el?.section?.toLowerCase() == course?.toLowerCase()));
     setLoading(false);
   };
 
@@ -94,7 +95,7 @@ export const RandomStudent = ({ course }) => {
             Reset
           </Button>
         ) : (
-          <Button onClick={next} fullWidth>
+          <Button isLoading={loading} onClick={next} fullWidth>
             Next - {students?.length - used?.length}
           </Button>
         )}
